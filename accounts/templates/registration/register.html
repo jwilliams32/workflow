@@ -1,0 +1,29 @@
+{% extends 'agent_app/base.html' %}
+
+{% block content %}
+
+<body>
+    <h1>Registration Page</h1>
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        {% if form.errors %}
+        <p>Errors in the form!</p>
+        {% endif %}
+
+        {{ form }}
+
+        <input type="submit" value="Register">
+    </form>
+
+   <br>
+  <p><strong>-- OR --</strong></p>
+  <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+
+</body>
+
+
+
+
+
+
+{% endblock %}

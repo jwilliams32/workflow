@@ -1,0 +1,16 @@
+{% extends 'agent_app/base.html' %}
+
+{% block content %}
+
+
+<body>
+    <h1>Index page</h1>
+    {% if user.is_authenticated %}
+    <h2>Your name is: {{ user.username }}</h2>
+    {% else %}
+    <h2>Your not logged in.</h2>
+
+    {% endif%}
+</body>
+
+{% endblock %}

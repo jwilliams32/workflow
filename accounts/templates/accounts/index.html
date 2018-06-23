@@ -4,9 +4,15 @@
 
 
 <body>
-    <h1>Index page</h1>
+    <h1>Profile</h1>
     {% if user.is_authenticated %}
-    <h2>Your name is: {{ user.username }}</h2>
+
+        <ul>
+          <li>Username: {{ user.username }}</li>
+          <li>Email: {{ user.email }}</li>
+          <li>Location: {{ user.profile.location }}</li>
+          <li>Birth Date: {{ user.profile.birth_date }}</li>
+        </ul>
     {% else %}
     <h2>Your not logged in.</h2>
 

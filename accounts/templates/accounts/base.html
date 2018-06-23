@@ -37,10 +37,22 @@
       <li class="active"><a href="#">Home</a></li>
       <li><a href="#">Doctors</a></li>
       <li><a href="#">Tests</a></li>
+      <li><a href="update/profile">Edit Profile</a></li>
+      <li><a href="#">Tests</a></li>
     </ul>
+
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="accounts/logout"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+          <!--<li><a href=""> <span class="glyphicon glyphicon-log-out">-->
+              <!--<form  action="{% url 'logout' %}" method="post">-->
+              <!--{% csrf_token %}-->
+              <!--<button type="submit">Logout</button>-->
+              <!--</form> </span></a>-->
+
+          <!--</li>-->
+
     </ul>
   </div>
   </nav>

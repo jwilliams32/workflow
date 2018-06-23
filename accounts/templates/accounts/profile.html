@@ -1,0 +1,24 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+
+<body>
+    <h1>Edit Profile</h1>
+    {% if user.is_authenticated %}
+
+        <form method="post">
+      {% csrf_token %}
+      {{ user_form.as_p }}
+      {{ profile_form.as_p }}
+      <button type="submit">Save changes</button>
+        </form>
+
+        </ul>
+    {% else %}
+    <h2>Your not logged in.</h2>
+
+    {% endif%}
+</body>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+
+<body>
+<div class="pt-4">
+        <h3 class="mb-4 mt-5 col-lg" id="about">List Doctors</h3>
+            <hr>
+    {% if doctors %}
+    <!--Add Card With Description of Doctor and Image-->
+        <div class="col-lg order-lg-3 col-lg-4">
+
+        <div class="list-group">
+        {% for doctor in doctors %}
+            <li>
+        <a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a>
+            </li>
+        {% endfor %}
+
+      {% else %}
+<h2>No doctors</h2>
+
+        </div>
+      </div>
+
+</div>
+
+</body>
+    {% endif %}
+{% endblock %}

@@ -4,19 +4,27 @@
 
 
 <body>
-    <h1>Profile</h1>
-    {% if user.is_authenticated %}
+<div class="pt-4">
+        <h3 class="mb-4 mt-5 col-lg" id="about">Profile</h3>
+            <hr>
+        <div class="col-lg order-lg-3 col-lg-4">
+        {% if user.is_authenticated %}
 
-        <ul>
-          <li>Username: {{ user.username }}</li>
-          <li>Email: {{ user.email }}</li>
-          <li>Location: {{ user.profile.location }}</li>
-          <li>Birth Date: {{ user.profile.birth_date }}</li>
-        </ul>
-    {% else %}
+
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action"><strong>Username</strong>: {{ user.username }}</a>
+          <a href="#" class="list-group-item list-group-item-action"><strong>Email</strong>: {{ user.email }}</a>
+          <a href="#" class="list-group-item list-group-item-action"><strong>Location</strong>: {{ user.profile.location }}</a>
+          <a href="#" class="list-group-item list-group-item-action"><strong>Birth Date</strong>: {{ user.profile.birth_date }}</a>
+          {% else %}
     <h2>Your not logged in.</h2>
 
     {% endif%}
+        </div>
+      </div>
+
+</div>
+
 </body>
 
 {% endblock %}

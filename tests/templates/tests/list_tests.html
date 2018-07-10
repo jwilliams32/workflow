@@ -1,0 +1,32 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+
+<body>
+<div class="pt-4">
+        <!--Add Card With Description of Test and Image-->
+
+        <h3 class="mb-4 mt-5 col-lg" id="about">List of Tests</h3>
+            <hr>
+    {% if tests %}
+        <div class="col-lg order-lg-3 col-lg-4">
+
+        <div class="list-group">
+        {% for test in tests %}
+            <li>
+        <a href="{{ test.get_absolute_url}}">{{ test }}</a>
+            </li>
+        {% endfor %}
+
+      {% else %}
+<h2>No test</h2>
+
+        </div>
+      </div>
+
+</div>
+
+</body>
+    {% endif %}
+{% endblock %}

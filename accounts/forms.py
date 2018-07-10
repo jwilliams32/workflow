@@ -58,25 +58,25 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ('location', 'bio', 'birth_date')
 
-class CreateDoctor(forms.ModelForm):
-    class Meta:
-        model = Doctor
-        fields = []
-
-# Create Form for a test
-class CreateTest(forms.ModelForm):
-    class Meta:
-        model = Test
-        fields = []
-
-class WorkUp(forms.ModelForm):
-    class Meta:
-        model = Workup
-        fields = []
-
-
-# Create a Form for a comment
-class CreateComment(forms.ModelForm):
-    class Meta:
-        model = Comment
-        fields = []
+# class CreateDoctor(forms.ModelForm):
+#     class Meta:
+#         model = Doctor
+#         fields = []
+#
+# # Create Form for a test
+# class CreateTest(forms.ModelForm):
+#     class Meta:
+#         model = Test
+#         fields = []
+#
+# class WorkUp(forms.ModelForm):
+#     class Meta:
+#         model = Workup
+#         fields = []
+#
+#
+# # Create a Form for a comment
+# class CreateComment(forms.ModelForm):
+#     class Meta:
+#         model = Comment
+#         fields = []

@@ -9,18 +9,18 @@
 
         <h3 class="mb-4 mt-5 col-lg" id="about">List of Work Ups</h3>
             <hr>
-    {% if work_ups %}
+    {% if workups %}
         <div class="col-lg order-lg-3 col-lg-4">
 
         <div class="list-group">
-        {% for work_up in work_ups.all %}
+        {% for workup in workups.all %}
             <li>
-        <a href="{{ work_up.get_absolute_url}}">{{ work_up }}</a>
+        <a href="{{ work_up.get_absolute_url}}">{{ workup }}</a>
             </li>
         {% endfor %}
 
       {% else %}
-<h2>No test</h2>
+<h2>No Work Ups </h2>
 
         </div>
       </div>

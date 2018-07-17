@@ -39,8 +39,8 @@
             <h2> Work Ups</h2>
 
         <!--Workups -->
-            {% for work_up in workup.doctor.all %}
-            <a href="{% url 'view_work_up' pk=work_up.pk %}"><p> {{ work_up }}</p></a>
+            {% for work_up in doctor.work_ups.all %}
+            <a href="{% url 'view_work_up' pk=work_up.pk %}"><p> {{ work_up.work_up_name }}</p></a>
 
             {% empty%}
             <p>I have no work ups</p>

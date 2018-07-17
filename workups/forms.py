@@ -4,4 +4,4 @@ from . import models
 class CreateWorkUp(forms.ModelForm):
     class Meta:
         model = models.WorkUp
-        fields = ['work_up_name', 'work_up_instruction','doctor']
+        fields = ['workup_name', 'workup_instruction','doctor']

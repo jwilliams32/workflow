@@ -3,25 +3,25 @@ from .models import WorkUp
 from . import forms
 # Create your views here.
 
-def list_work_up(request):
-    work_ups = WorkUp.objects.all
-    return render(request, 'workups/list_work_up.html', {'work_ups': work_ups})
+def list_workup(request):
+    workups = WorkUp.objects.all
+    return render(request, 'workups/list_workup.html', {'workups': workups})
 
 
 
 # view for one doctor
-def view_work_up(request, pk=None):
+def view_workup(request, pk=None):
 
     if pk:
-        work_up = WorkUp.objects.get(pk=pk)
+        workup = WorkUp.objects.get(pk=pk)
 
     else:
-        work_up = request.work_up
+        workup = request.workup
 
-    return render(request, 'workups/view_work_up.html', {'work_up': work_up})
+    return render(request, 'workups/view_workup.html', {'workup': workup})
 
 # view to create a test
-def create_work_up(request):
+def create_workup(request):
     if request.method == 'POST':
         form = forms.CreateWorkUp(data=request.POST)
         if form.is_valid():
@@ -37,11 +37,11 @@ def create_work_up(request):
         form = forms.CreateWorkUp
     context = {'form': form}
 
-    return render(request, 'workups/create_work_up.html', context)
+    return render(request, 'workups/create_workup.html', context)
 
 
 
 
 # view to edit a test
-def edit_work_up(request):
-    return render(request, 'tests/edit_test.html')
+def edit_workup(request):
+    return render(request, 'tests/edit_workup.html')

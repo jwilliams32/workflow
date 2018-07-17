@@ -8,10 +8,10 @@
     <div class="container pt-5">
 
         <div class="col-md-5 mt-5">
-         <h4 class="">Test</h4>
+         <h4 class="">Work Up</h4>
 
-            <h2>Test:{{ workup.work_up_name }}</h2>
-            <p>Description: {{ workup.work_up_instruction }}</p>
+            <h2>Work Up for:{{ workup.workup_name }}</h2>
+            <p>Instructions: {{ workup.workup_instruction }}</p>
         </div>
         <!--Test Card-->
         <div class="col-md-5 mt-5">
@@ -27,7 +27,7 @@
             <!--/Test Instructions-->
 
             <!--Doctors that use this test-->
-            {% for doctor in test.doctor.all %}
+            {% for doctor in workup.doctor.all %}
             <a href="{% url 'view_doctor' pk=doctor.pk %}"><p> {{ doctor }}</p></a>
             {% empty%}
             <p>I have not test</p>

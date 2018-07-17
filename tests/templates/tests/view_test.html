@@ -20,8 +20,8 @@
         <!--/Tests Card-->
 
             <!--Test Instructions-->
-            {% for work_up in work_ups.test.all %}
-            <a href="{{ work_up.get_absolute_url}}"><p> {{ work_up }}</p></a>
+            {% for work_up in work_ups.tests.all %}
+            <a href="{% url 'view_work_up' pk=work_up.pk %}"><p> {{ work_up }}</p></a>
             {% empty%}
             <p>I have no workups</p>
             {% endfor %}

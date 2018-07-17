@@ -12,7 +12,7 @@
 
         <h2>Create Test</h2>
 
-        <form action="{% url 'create_work_up' %}" class="site-form" method="post">
+        <form action="{% url 'create_workup' %}" class="site-form" method="post">
             {% csrf_token%}
 
             {{ form.as_p }}

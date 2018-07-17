@@ -1,0 +1,22 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+
+
+<body>
+    <h1>Edit Work Up</h1>
+    {% if user.is_authenticated %}
+
+    <div class="container">
+        <h4>Edit Work Up</h4>
+
+    </div>
+
+
+    {% else %}
+    <h2>Your not logged in.</h2>
+
+    {% endif%}
+</body>
+
+{% endblock %}

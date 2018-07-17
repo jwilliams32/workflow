@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'doctors',
     'tests',
+    'workups',
     'django_extensions',
 ]
 

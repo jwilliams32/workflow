@@ -10,8 +10,8 @@
         <div class="col-md-5 mt-5">
          <h4 class="">Test</h4>
 
-            <h2>Test:{{ test.test_name }}</h2>
-            <p>Description: {{test.test_description}}</p>
+            <h2>Test:{{ workup.work_up_name }}</h2>
+            <p>Description: {{ workup.work_up_instruction }}</p>
         </div>
         <!--Test Card-->
         <div class="col-md-5 mt-5">
@@ -20,11 +20,7 @@
         <!--/Tests Card-->
 
             <!--Test Instructions-->
-            {% for work_up in work_ups.test.all %}
-            <a href="{{ work_up.get_absolute_url}}"><p> {{ work_up }}</p></a>
-            {% empty%}
-            <p>I have no workups</p>
-            {% endfor %}
+
 
 
 

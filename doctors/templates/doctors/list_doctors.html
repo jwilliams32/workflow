@@ -4,28 +4,60 @@
 
 
 <body>
-<div class="pt-4">
-        <h3 class="mb-4 mt-5 col-lg" id="about">List Doctors</h3>
+<!--<div class="container-fluid mt-4">-->
+    <!--<div class="row justify-content-center">-->
+        <!--<div class="col-auto mb-3">-->
+            <!--<div class="card" style="width: 18rem;">-->
+                <!--{% if doctors %}-->
+
+                <!--<div class="card-body">-->
+                    <!--{% for doctor in doctors %}-->
+                    <!--<h5 class="card-title"><a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a> | {{ doctor.clinic_type }}</h5>-->
+                    <!--<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>-->
+                    <!--<p class="card-text">{{doctor.description}}</p>-->
+                    <!--<a href="#" class="card-link">Card link</a>-->
+                    <!--<a href="#" class="card-link">Another link</a>-->
+                    <!--{% endfor %}-->
+
+                <!--{% else %}-->
+            <!--<h2>No doctors</h2>-->
+                <!--</div>-->
+                 <!--{% endif %}-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<div class="container pt-4">
+     <h1 id="speakers" class="display-4 text-center my-5 text-muted">Doctors</h1>
             <hr>
     {% if doctors %}
     <!--Add Card With Description of Doctor and Image-->
-        <div class="col-lg order-lg-3 col-lg-4">
 
-        <div class="list-group">
         {% for doctor in doctors %}
-            <li>
-        <a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a>
-            </li>
+     <div class="row">
+      <div class="col-md-6 col-lg-4 text-center">
+        <div class="card mb-3">
+          <img class="card-img-top" src="https://images.vexels.com/media/users/3/144185/isolated/preview/a9075b02366ea61e8995f8d5b08d0267-flat-doctor-cartoon-by-vexels.png" alt="Vivianne">
+          <div class="card-body">
+          <h4 class="card-title"><a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a> | {{ doctor.clinic_type }}</h4>
+          <p class="card-text">{{doctor.description}}</p>
+        </div>
+       </div>
+      </div>
+            <!--<li>-->
+        <!--<a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a>-->
+            <!--</li>-->
         {% endfor %}
 
       {% else %}
 <h2>No doctors</h2>
 
-        </div>
-      </div>
+    </div>
+
 
 </div>
-
 </body>
     {% endif %}
 {% endblock %}

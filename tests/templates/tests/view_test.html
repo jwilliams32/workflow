@@ -6,46 +6,54 @@
 <body>
 
     <div class="container pt-5">
-
-        <div class="col-md-5 mt-5">
-         <h4 class="">Test</h4>
-
-            <h2>Test:{{ test.test_name }}</h2>
-            <p>Description: {{test.test_description}}</p>
+            <!--Test Card-->
+        <div>
+             <h1 id="speakers" class="display-4 text-center my-5 text-muted pt-4"> {{test.test_name}} </h1>
+            <hr>
         </div>
-        <!--Test Card-->
-        <div class="col-md-5 mt-5">
-        <h4>Doctors Who Use This Test </h4>
-        <div class="col-md-5 mt-5">
-        <!--/Tests Card-->
 
-            <!--Test Instructions-->
-            {% for work_up in work_ups.tests.all %}
-            <a href="{% url 'view_work_up' pk=work_up.pk %}"><p> {{ work_up }}</p></a>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card mb-3">
+                      <img class="card-img-top" src="https://media.istockphoto.com/vectors/ophthalmologist-tools-icons-set-flat-style-vector-id856635524?k=6&m=856635524&s=612x612&w=0&h=rnFf_efcd-EJ_gwZW3FdcWCroqv8TD6882Ea0Boe1yE=" alt="Test">
+                    <!--<div class="card-body">-->
+                      <!--<h4 class="card-title">{{ test.test_name }}</h4>-->
+                      <!--<p class="card-text">{{test.test_description}}</p>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <!--/Test Card-->
+        </div>
+
+            <!--<h2>Test:{{ test.test_name }}</h2>-->
+            <!--<p>Description: {{test.test_description}}</p>-->
+
+
+        <!--Test Work Ups-->
+        <div class="col-md-6 mt-5 mx-auto">
+            <hr>
+            {% for workup in test.workuptests.all %}
+                <a href="{% url 'view_workup' pk=workup.pk %}"><p> {{ workup.workup_name }}</p></a>
             {% empty%}
-            <p>I have no workups</p>
+                <p>I have no workups</p>
             {% endfor %}
 
 
+        </div>
+            <!--/Test Work Ups-->
 
-            <!--/Test Instructions-->
-
+        <div class="col-md-6 mt-5 mx-auto">
+            <hr>
+            <h4>Doctors Who Use This Test </h4>
             <!--Doctors that use this test-->
             {% for doctor in test.doctor.all %}
-            <a href="{% url 'view_doctor' pk=doctor.pk %}"><p> {{ doctor }}</p></a>
+                <a href="{% url 'view_doctor' pk=doctor.pk %}"><p> {{ doctor }}</p></a>
             {% empty%}
-            <p>I have not test</p>
+                <p>I have not test</p>
             {% endfor %}
             <!--/Doctors that use this test-->
         </div>
 
-        <div class="col-md-5 mt-5">
-            <h1></h1>
-
-        </div>
-
-
-        </div>
     </div>
 </body>
 {% endblock %}

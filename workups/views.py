@@ -1,19 +1,19 @@
 from django.shortcuts import render, redirect
-from .models import WorkUp
+from .models import Workup
 from . import forms
 # Create your views here.
 
 def list_workup(request):
-    workups = WorkUp.objects.all
+    workups = Workup.objects.all
     return render(request, 'workups/list_workup.html', {'workups': workups})
 
 
 
-# view for one doctor
+# view for one workup
 def view_workup(request, pk=None):
 
     if pk:
-        workup = WorkUp.objects.get(pk=pk)
+        workup = Workup.objects.get(pk=pk)
 
     else:
         workup = request.workup
@@ -23,7 +23,7 @@ def view_workup(request, pk=None):
 # view to create a test
 def create_workup(request):
     if request.method == 'POST':
-        form = forms.CreateWorkUp(data=request.POST)
+        form = forms.CreateWorkup(data=request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
 
@@ -31,10 +31,10 @@ def create_workup(request):
             # save to database
             instance.save()
 
-    #       save test to db
-            return redirect('/tests/')
+    #       save workup to db
+            return redirect('/')
     else:
-        form = forms.CreateWorkUp
+        form = forms.CreateWorkup
     context = {'form': form}
 
     return render(request, 'workups/create_workup.html', context)

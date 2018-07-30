@@ -4,28 +4,33 @@
 
 
 <body>
-<div class="pt-4">
-        <!--Add Card With Description of Test and Image-->
+    <div class="container pt-4">
+            <!--Add Card With Description of Test and Image-->
+         <h1 id="test" class="display-4 text-center my-5 text-muted pt-4">Tests</h1>
+                <hr>
+        {% if tests %}
+            <div class="row">
+            {% for test in tests %}
+                <div class="col-md-6 col-lg-4 text-center">
+                    <div class="card mb-3">
+                        <img class="card-img-top" src="https://media.istockphoto.com/vectors/ophthalmologist-tools-icons-set-flat-style-vector-id856635524?k=6&m=856635524&s=612x612&w=0&h=rnFf_efcd-EJ_gwZW3FdcWCroqv8TD6882Ea0Boe1yE=" alt="Test">
 
-        <h3 class="mb-4 mt-5 col-lg" id="about">List of Tests</h3>
-            <hr>
-    {% if tests %}
-        <div class="col-lg order-lg-3 col-lg-4">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="{{ test.get_absolute_url}}">{{ test }}</a>
+                            </h4>
 
-        <div class="list-group">
-        {% for test in tests %}
-            <li>
-        <a href="{{ test.get_absolute_url}}">{{ test }}</a>
-            </li>
-        {% endfor %}
+                            <!--<p class="card-text">{{test.test_description}}</p>-->
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
 
-      {% else %}
-<h2>No test</h2>
+          {% else %}
+            <h2>No test</h2>
 
-        </div>
-      </div>
-
-</div>
+            </div>
+    </div>
 
 </body>
     {% endif %}

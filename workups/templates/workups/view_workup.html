@@ -7,16 +7,23 @@
 
     <div class="container pt-5">
 
-        <div class="col-md-5 mt-5">
-         <h4 class="">Work Up</h4>
-
-            <h2>Work Up for:{{ workup.workup_name }}</h2>
-            <p>Instructions: {{ workup.workup_instruction }}</p>
+        <div class="col-md-6 mt-5 mx-auto">
+            <h2 class="text-center">Workup:<br>
+                {{ workup.workup_name }}</h2>
+            <hr>
         </div>
+        <div class="col-md-6 mt-5 mx-auto">
+            <p>Instructions:<br>
+                {{ workup.workup_instruction }}</p>
+        </div>
+
+
+
         <!--Test Card-->
-        <div class="col-md-5 mt-5">
-        <h4>Doctors Who Use This Test </h4>
-        <div class="col-md-5 mt-5">
+        <div class="col-md-6 mt-5 mx-auto">
+            <hr>
+        <h4>Doctors Who Use This Workup </h4>
+        <div class="col-md-4 mt-5">
         <!--/Tests Card-->
 
             <!--Test Instructions-->

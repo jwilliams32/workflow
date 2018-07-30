@@ -9,7 +9,7 @@ from django.contrib import messages
 # Create your views here.
 
 def index(request):
-    return render(request, 'accounts/index.html')
+    return render(request, 'accounts/home.html')
 
 
 def register(request):

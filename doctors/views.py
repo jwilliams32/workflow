@@ -3,6 +3,11 @@ from django.contrib.auth.decorators import login_required
 from .models import Doctor
 from django.views import generic
 from . import forms
+from django.utils.decorators import method_decorator
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 # view for all of the doctors
@@ -22,6 +27,8 @@ def view_doctor(request, pk=None):
         doctor = request.doctor
 
     return render(request, 'doctors/view_doctor.html', {'doctor': doctor})
+
+@login_required(login_url="/")
 
 # view to create a doctor
 def create_doctor(request):
@@ -45,7 +52,17 @@ def create_doctor(request):
 
 
 
+@login_required(login_url="/")
 
 # view to edit a doctor
-def edit_doctor(request):
-    return render(request, 'doctors/edit_doctor.html')
+def edit_doctor(request, pk):
+    if request.method == 'POST':
+        edit_doctor_form = CreateDoctor
+        doctor = Doctor.objects.get(pk=pk)
+        form = form
+    else:
+        doctor = request.doctor
+
+    return render(request, 'doctors/edit_doctor.html', {'doctor':doctor})
+
+

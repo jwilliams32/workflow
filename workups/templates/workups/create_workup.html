@@ -4,13 +4,12 @@
 
 
 <body>
-    <h1>Create Work Up</h1>
-    <div class="col-md-5 mt-5 mb-5">
+    <div class="col-md-5 mt-5 mb-5 ">
     	{% if form.errors %}
 	<p>You entered something wrong</p>
 	    {% endif %}
 
-        <h2>Create Test</h2>
+        <h2 class="pt-4">Create Workup</h2>
 
         <form action="{% url 'create_workup' %}" class="site-form" method="post">
             {% csrf_token%}

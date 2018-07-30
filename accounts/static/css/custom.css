@@ -1,0 +1,5 @@
+.jumbotron{
+  background-image:url  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),('../img/southcampus.jpg');
+  background-size:cover;
+}
+

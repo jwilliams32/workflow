@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Test
 from . import forms
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 def list_tests(request):
@@ -20,6 +22,7 @@ def view_test(request, pk=None):
 
     return render(request, 'tests/view_test.html', {'test': test})
 
+@login_required(login_url="/")
 # view to create a test
 def create_test(request):
     if request.method == 'POST':
@@ -41,8 +44,7 @@ def create_test(request):
     return render(request, 'tests/create_test.html', context)
 
 
-
-
+@login_required(login_url="/")
 # view to edit a test
 def edit_test(request):
     return render(request, 'tests/edit_test.html')

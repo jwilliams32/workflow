@@ -8,6 +8,7 @@ class Doctor(models.Model):
     doctors_name = models.CharField(max_length=500)
     clinic_type = models.CharField(max_length=75)
     description = models.TextField(max_length=1000)
+    bio = models.CharField(max_length=500, blank=True)
     # test = models.ManyToManyField('tests.Test', related_name='doctor_tests')
 
     def __str__(self):

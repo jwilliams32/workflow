@@ -4,10 +4,10 @@ from django.db import models
 from django.urls import reverse
 # Create your models here.
 
-class WorkUp(models.Model):
+class Workup(models.Model):
 
-    doctor = models.ForeignKey('doctors.Doctor', on_delete=models.CASCADE, default=None, blank=True, null=True)
-    test = models.ForeignKey('tests.Test', on_delete=models.CASCADE, default=None, blank=True, null=True)
+    doctor = models.ManyToManyField('doctors.Doctor', related_name='workupdoctors', blank=True)
+    test = models.ManyToManyField('tests.Test', related_name='workuptests', blank=True)
     workup_name = models.TextField(max_length=100)
     workup_instruction = models.TextField(max_length=5000)
 

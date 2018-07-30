@@ -30,34 +30,40 @@
 
 
 <div class="container pt-4">
-     <h1 id="speakers" class="display-4 text-center my-5 text-muted">Doctors</h1>
+     <h1 id="speakers" class="display-4 text-center my-5 text-muted pt-4">Doctors</h1>
             <hr>
     {% if doctors %}
     <!--Add Card With Description of Doctor and Image-->
 
-        {% for doctor in doctors %}
+
      <div class="row">
-      <div class="col-md-6 col-lg-4 text-center">
-        <div class="card mb-3">
-          <img class="card-img-top" src="https://images.vexels.com/media/users/3/144185/isolated/preview/a9075b02366ea61e8995f8d5b08d0267-flat-doctor-cartoon-by-vexels.png" alt="Vivianne">
-          <div class="card-body">
-          <h4 class="card-title"><a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a> | {{ doctor.clinic_type }}</h4>
-          <p class="card-text">{{doctor.description}}</p>
+        {% for doctor in doctors %}
+        <div class="col-md-6 col-lg-4 text-center">
+            <div class="card mb-3">
+                <img class="card-img-top" src="https://images.vexels.com/media/users/3/144185/isolated/preview/a9075b02366ea61e8995f8d5b08d0267-flat-doctor-cartoon-by-vexels.png" alt="Vivianne">
+
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a> | {{ doctor.clinic_type }}
+                    </h4>
+
+                    <p class="card-text">{{doctor.description}}</p>
+                </div>
+            </div>
         </div>
-       </div>
-      </div>
             <!--<li>-->
-        <!--<a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a>-->
+            <!--<a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a>-->
             <!--</li>-->
+
         {% endfor %}
+    {% else %}
 
-      {% else %}
-<h2>No doctors</h2>
+        <h2>No doctors</h2>
 
+    {% endif %}
     </div>
-
 
 </div>
 </body>
-    {% endif %}
+
 {% endblock %}

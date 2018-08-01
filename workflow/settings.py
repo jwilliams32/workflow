@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,6 +27,10 @@ SECRET_KEY = '789kp14v(9gq!ey1_g9%8v*dj&r!rc7l!wg9f_p+&mjkmmi#l3'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
 
 
 # Application definition

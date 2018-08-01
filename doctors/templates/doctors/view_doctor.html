@@ -8,7 +8,7 @@
     <div class="container pt-4">
 
         <div>
-             <h1 id="speakers" class="display-4 text-center my-5 text-muted pt-4"> {{doctor.doctors_name}} | {{ doctor.clinic_type }} </h1>
+             <h2 id="speakers" class="display-4 text-center my-5 text-muted pt-4"> {{doctor.doctors_name}} </h2>
             <hr>
         </div>
 
@@ -18,8 +18,8 @@
                     <div class="card mb-3" style="width: 18rem;">
                       <img class="card-img-top" src="https://images.vexels.com/media/users/3/144185/isolated/preview/a9075b02366ea61e8995f8d5b08d0267-flat-doctor-cartoon-by-vexels.png" alt="Vivianne">
                       <div class="card-body">
-                      <!--<h4 class="card-title">{{ doctor.doctors_name }} | {{ doctor.clinic_type }}</h4>-->
-                          <p class="card-text"><a href="{{doctor.bio}}">View Profile</a></p>
+<!--Target = _blank creates a new tab-->
+                          <p class="card-text"><a href="{{doctor.bio}}" target="_blank">View Profile</a></p>
                     </div>
                 </div>
             </div>

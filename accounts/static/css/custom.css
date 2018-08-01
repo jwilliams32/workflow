@@ -1,5 +1,28 @@
 .jumbotron{
-  background-image:url  linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),('../img/southcampus.jpg');
+
+  background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../img/southcampus.jpg');
   background-size:cover;
+
 }
 
+.navbar{
+
+  background-color:#003da5;
+
+}
+
+.nav-link, .navbar-brand{
+
+  color:white;
+
+}
+
+a:hover {
+    color: gray;
+}
+
+.navbar-toggler-icon{
+
+  color:white;
+
+}

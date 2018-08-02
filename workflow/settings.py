@@ -26,10 +26,9 @@ SECRET_KEY = '789kp14v(9gq!ey1_g9%8v*dj&r!rc7l!wg9f_p+&mjkmmi#l3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = [‘0.0.0.0’, ‘localhost’]
 # Activate Django-Heroku.
-django_heroku.settings(locals())
 
 
 
@@ -58,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.'
 ]
 
 ROOT_URLCONF = 'workflow.urls'
@@ -146,3 +146,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+
+django_heroku.settings(locals())

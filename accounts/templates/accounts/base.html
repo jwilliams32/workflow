@@ -37,13 +37,10 @@
         </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
           <div class="navbar-nav ">
+            {% if user.is_authenticated %}
             <a class="nav-item nav-link" href="/">Home<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/doctors">Doctors</a>
             <a class="nav-item nav-link" href="/tests">Test</a>
-            <a class="nav-item nav-link" href="/login">| Login</a>
-
-           {% if user.is_authenticated %}
-
             <a class="nav-item nav-link" href="/admin">Admin</a>
             <!--<a class="nav-item nav-link" href="/doctor/create">Add Doctor</a>-->
             <!--<a class="nav-item nav-link" href="/test/create">Add Test</a>-->
@@ -51,7 +48,12 @@
             <!--<a class="nav-item nav-link" href="update/profile">Edit Profile</a>-->
             <!--<a class="nav-item nav-link" href="/register">Sign Up</a>-->
             <a class="nav-item nav-link" href="/accounts/logout">Log Out</a>
-           {% endif %}
+            {% else %}
+            <a class="nav-item nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/doctors">Doctors</a>
+            <a class="nav-item nav-link" href="/tests">Test</a>
+            <a class="nav-item nav-link" href="/login">cLogin</a>
+            {% endif %}
 
           </div>
         </div>

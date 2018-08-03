@@ -11,18 +11,22 @@
 
 }
 
-.nav-link, .navbar-brand{
+.nav-item, .navbar-brand{
 
   color:white;
 
 }
 
 a:hover {
-    color: white;
+    color: black;
 }
 
 .navbar-toggler-icon{
 
-  color:black;
+  color:white;
 
+}
+
+a:link {
+    text-decoration: none;
 }

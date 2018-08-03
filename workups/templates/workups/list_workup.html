@@ -4,29 +4,31 @@
 
 
 <body>
-<div class="pt-4">
-        <!--Add Card With Description of Test and Image-->
+    <div class="container pt-4">
 
-        <h3 class="mb-4 mt-5 col-lg" id="about">List of Work Ups</h3>
+     <h1 class="display-4 text-center my-5 text-muted pt-4">Workups</h1>
             <hr>
-    {% if workups %}
-        <div class="col-lg order-lg-3 col-lg-4">
 
-        <div class="list-group">
-        {% for workup in workups.all %}
-            <li>
-        <a href="{{ workup.get_absolute_url}}">{{ workup }}</a>
-            </li>
-        {% endfor %}
+        {% if workups %}
+            {% for workup in workups.all %}
 
-      {% else %}
-<h2>No Work Ups </h2>
+                <div class="col-lg order-lg-3 col-lg-4 text-center">
+                    <div class="list-group list-group-item list-group-item-action">
 
-        </div>
-      </div>
+                    <li>
+                        <a href="{{ workup.get_absolute_url}}">{{ workup }}</a>
+                    </li>
 
-</div>
+                    </div>
+                </div>
+            {% endfor %}
+
+          {% else %}
+            <h2>No Work Ups </h2>
+        {% endif %}
+
+
+    </div>
 
 </body>
-    {% endif %}
 {% endblock %}

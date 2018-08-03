@@ -8,7 +8,7 @@
     <div class="container pt-5">
 
         <div class="col-md-6 mt-5 mx-auto">
-            <h2 class="text-center">Workup:<br>
+            <h2 class="display-4 text-center my-5 text-muted pt-4">Workup:<br>
                 {{ workup.workup_name }}</h2>
             <hr>
         </div>
@@ -22,7 +22,7 @@
         <!--Test Card-->
         <div class="col-md-6 mt-5 mx-auto">
             <hr>
-        <h4>Doctors Who Use This Workup </h4>
+        <h4 class="text-center my-5 pt-4">Doctors using this workup</h4>
         <div class="col-md-4 mt-5">
         <!--/Tests Card-->
 
@@ -41,13 +41,7 @@
             {% endfor %}
             <!--/Doctors that use this test-->
         </div>
-
-        <div class="col-md-5 mt-5">
-            <h1></h1>
-
-        </div>
-
-
+            <hr class="pb-4">
         </div>
     </div>
 </body>

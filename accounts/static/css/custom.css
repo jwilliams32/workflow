@@ -18,11 +18,11 @@
 }
 
 a:hover {
-    color: gray;
+    color: white;
 }
 
 .navbar-toggler-icon{
 
-  color:white;
+  color:black;
 
 }

@@ -13,15 +13,17 @@
             {% for test in tests %}
                 <div class="col-md-6 col-lg-4 text-center">
                     <div class="card mb-3">
+                        <a href="{{ test.get_absolute_url}}">
                         <img class="card-img-top" src="https://media.istockphoto.com/vectors/ophthalmologist-tools-icons-set-flat-style-vector-id856635524?k=6&m=856635524&s=612x612&w=0&h=rnFf_efcd-EJ_gwZW3FdcWCroqv8TD6882Ea0Boe1yE=" alt="Test">
 
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="{{ test.get_absolute_url}}">{{ test }}</a>
-                            </h4>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <h2>{{ test }}</h2>
+                                </h4>
 
-                            <!--<p class="card-text">{{test.test_description}}</p>-->
-                        </div>
+                                <!--<p class="card-text">{{test.test_description}}</p>-->
+                            </div>
+                        </a>
                     </div>
                 </div>
             {% endfor %}

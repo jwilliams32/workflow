@@ -8,7 +8,7 @@
     <div class="container pt-5">
             <!--Test Card-->
         <div>
-             <h2 id="speakers" class="display-4 text-center my-5 text-muted pt-4"> {{test.test_name}} </h2>
+             <h2 id="speakers" class="display-5 text-center my-5 text-muted pt-4"> {{test.test_name}} </h2>
             <hr>
         </div>
 
@@ -35,7 +35,7 @@
             {% for workup in test.workuptests.all %}
                 <a href="{% url 'view_workup' pk=workup.pk %}"><p> {{ workup.workup_name }}</p></a>
             {% empty%}
-                <p>I have no workups</p>
+                <p>I have no workups!</p>
             {% endfor %}
 
 
@@ -49,7 +49,7 @@
             {% for doctor in test.doctor.all %}
                 <a href="{% url 'view_doctor' pk=doctor.pk %}"><p> {{ doctor }}</p></a>
             {% empty%}
-                <p>I have not test</p>
+                <p>No doctors is using the current workup!</p>
             {% endfor %}
             <!--/Doctors that use this test-->
         </div>

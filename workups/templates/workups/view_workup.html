@@ -37,7 +37,7 @@
             {% for doctor in workup.doctor.all %}
             <a href="{% url 'view_doctor' pk=doctor.pk %}"><p> {{ doctor }}</p></a>
             {% empty%}
-            <p>I have not test</p>
+            <p>No doctors is using the current workup!</p>
             {% endfor %}
             <!--/Doctors that use this test-->
         </div>

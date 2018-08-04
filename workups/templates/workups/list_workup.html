@@ -10,23 +10,25 @@
             <hr>
 
         {% if workups %}
-            {% for workup in workups.all %}
+            <div class="row">
 
-                <div class="col-lg order-lg-3 col-lg-4 text-center">
-                    <div class="list-group list-group-item list-group-item-action">
+                {% for workup in workups.all %}
 
-                    <li>
-                        <a href="{{ workup.get_absolute_url}}">{{ workup }}</a>
-                    </li>
+                    <div class="col-lg order-lg-3 col-lg-4 text-center">
+                        <div class="list-group list-group-item list-group-item-action">
 
+                        <li>
+                            <a href="{{ workup.get_absolute_url}}">{{ workup }}</a>
+                        </li>
+
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
 
-          {% else %}
-            <h2>No Work Ups </h2>
-        {% endif %}
-
+              {% else %}
+                <h2>No Work Ups </h2>
+            {% endif %}
+            </div>
 
     </div>
 

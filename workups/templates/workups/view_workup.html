@@ -5,7 +5,7 @@
 
 <body>
 
-    <div class="container pt-5">
+    <div class="container pt-5 pb-4">
 
         <div class="col-md-6 mt-5 mx-auto">
             <h2 class="display-4 text-center my-5 text-muted pt-4">Workup:<br>
@@ -15,34 +15,36 @@
         <div class="col-md-6 mt-5 mx-auto">
             <p>Instructions:<br>
                 {{ workup.workup_instruction }}</p>
+                        <hr class="pb-4">
+
         </div>
 
 
 
         <!--Test Card-->
-        <div class="col-md-6 mt-5 mx-auto">
-            <hr>
-        <h4 class="text-center my-5 pt-4">Doctors using this workup</h4>
-        <div class="col-md-4 mt-5">
-        <!--/Tests Card-->
+        <!--<div class="col-md-6 mt-5 mx-auto">-->
+            <!--<hr>-->
+        <!--<h4 class="text-center my-5 pt-4">Doctors using this workup</h4>-->
+        <!--<div class="col-md-4 mt-5">-->
+        <!--&lt;!&ndash;/Tests Card&ndash;&gt;-->
 
-            <!--Test Instructions-->
-
-
+            <!--&lt;!&ndash;Test Instructions&ndash;&gt;-->
 
 
-            <!--/Test Instructions-->
 
-            <!--Doctors that use this test-->
-            {% for doctor in workup.doctor.all %}
-            <a href="{% url 'view_doctor' pk=doctor.pk %}"><p> {{ doctor }}</p></a>
-            {% empty%}
-            <p>No doctors is using the current workup!</p>
-            {% endfor %}
-            <!--/Doctors that use this test-->
-        </div>
-            <hr class="pb-4">
-        </div>
+
+            <!--&lt;!&ndash;/Test Instructions&ndash;&gt;-->
+
+            <!--&lt;!&ndash;Doctors that use this test&ndash;&gt;-->
+            <!--{% for doctor in workup.doctor.all %}-->
+            <!--<a href="{% url 'view_doctor' pk=doctor.pk %}"><p> {{ doctor }}</p></a>-->
+            <!--{% empty%}-->
+            <!--<p>No doctors is using the current workup!</p>-->
+            <!--{% endfor %}-->
+            <!--&lt;!&ndash;/Doctors that use this test&ndash;&gt;-->
+        <!--</div>-->
+            <!--<hr class="pb-4">-->
+        <!--</div>-->
     </div>
 </body>
 {% endblock %}

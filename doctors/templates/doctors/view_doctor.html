@@ -32,26 +32,6 @@
 
         <!--Workups -->
             {% for workup in doctor.workupdoctors.all %}
-            <!--<ul>-->
-                <!--<li> {{ workup.workup_name }}</li>-->
-            <!--</ul>-->
-
-        <div class="accordion" id="workups">
-
-            <!--<div class="card">-->
-                <!--<div class="card-header">-->
-                    <!--<h5 class="mb-0">-->
-                    <!--<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
-                      <!--{{ workup.workup_name }}-->
-                    <!--</button>-->
-                    <!--</h5>-->
-                <!--</div>-->
-
-                <!--<div id="collapseOne" class="collapsed" aria-labelledby="headingOne" data-parent="#accordionExample">-->
-                    <!--<div class="card-body">-->
-                        <!--{{ workup.workup_instruction}}-->
-                    <!--</div>-->
-        </div>
 
                 <a href="{% url 'view_workup' pk=workup.pk %}"><p> {{ workup.workup_name }}</p></a>
 

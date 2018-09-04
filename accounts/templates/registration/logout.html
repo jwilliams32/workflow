@@ -3,9 +3,22 @@
 {% block content %}
 
 <body>
-    <h1>Logout Page</h1>
-    <p>Would you like to sign back in?</p>
-<a href="{% url 'login'%}">Click here to login again.</a>
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron jumbotron-fluid text-white">
+        <div class="container text-sm-center pt-5">
+          <h1 class="display-3 text-white-50 pt-5 pb-5">WorkFlow</h1>
+          <p class="lead">This is a web application to help improve your understanding of the WorkFlow of your current Ophthalmology Clinics!</p>
+          <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+        </div>
+      </div>
+
+      <div class=" container text-center">
+        <h1>Logout Page</h1>
+        <p>Would you like to sign back in?</p>
+        <a href="{% url 'login'%}">Click here to login again.</a>
+      </div>
+
 
 </body>
 

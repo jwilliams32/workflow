@@ -9,7 +9,7 @@ class ImageUploadForm(forms.Form):
 class CreateDoctor(forms.ModelForm):
     class Meta:
         model = models.Doctor
-        fields = ['doctors_name', 'clinic_type', 'description']
+        fields = ['doctors_name', 'clinic_type', 'description','doctors_pic']
 
 # class EditDoctor(forms.ModelForm):
 #     d

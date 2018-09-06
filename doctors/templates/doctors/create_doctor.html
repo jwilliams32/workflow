@@ -14,9 +14,6 @@
 
         <form action="{% url 'create_doctor' %}" class="site-form" method="post">
             {% csrf_token%}
-            <p>
-                <input id="id_image" type="file" class="" name="image">
-            </p>
 
             {{ form.as_p }}
 

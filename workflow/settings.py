@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'tests',
     'workups',
     'django_extensions',
+    'analytics',
 ]
 
 MIDDLEWARE = [

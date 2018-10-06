@@ -7,9 +7,10 @@ from django.urls import reverse
 class Test(models.Model):
 
     doctor = models.ManyToManyField('doctors.Doctor', related_name='tests', blank=True)
-    # test_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
     test_name = models.TextField(max_length=500)
-    test_description = models.TextField(max_length=500)
+    test_description = models.TextField(max_length=500, blank=True, null=True)
+    test_pic = models.ImageField(blank=True, null=True,
+         upload_to='tests/%Y/%m/%D/')
 
     def __str__(self):
         return '{0}'.format(self.test_name)

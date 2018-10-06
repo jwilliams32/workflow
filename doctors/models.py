@@ -6,8 +6,8 @@ from django.urls import reverse
 class Doctor(models.Model):
     doctors_name = models.CharField(max_length=500)
     clinic_type = models.CharField(max_length=75)
-    description = models.TextField(max_length=1000)
-    bio = models.CharField(max_length=500, blank=True)
+    description = models.TextField(max_length=1000, blank=True, null=True)
+    bio = models.CharField(max_length=500, blank=True, null=True)
     doctor_pic = models.ImageField(blank=True, null=True,
         upload_to="doctors/%Y/%m/%D/")
 

@@ -16,7 +16,12 @@
 
             <div class="col-sm-6 col-lg-4 mx-auto">
                     <div class="card mb-3" style="width: 18rem;">
-                      <img class="card-img-top" src="https://images.vexels.com/media/users/3/144185/isolated/preview/a9075b02366ea61e8995f8d5b08d0267-flat-doctor-cartoon-by-vexels.png" alt="Vivianne">
+                        {% if doctor.doctor_pic %}
+
+                      <img class="card-img-top" src="../media/{{doctor.doctor_pic}}" alt="Doctor Picture">
+                        {% else %}
+                      <img class="card-img-top" src="https://images.vexels.com/media/users/3/144185/isolated/preview/a9075b02366ea61e8995f8d5b08d0267-flat-doctor-cartoon-by-vexels.png" alt="Generic Doctor Picture">
+                        {% endif %}
                       <div class="card-body">
 <!--Target = _blank creates a new tab-->
                           <p class="card-text"><a href="{{doctor.bio}}" target="_blank">View Profile</a></p>

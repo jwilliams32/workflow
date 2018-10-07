@@ -10,6 +10,8 @@ class Workup(models.Model):
     test = models.ManyToManyField('tests.Test', related_name='workuptests', blank=True)
     workup_name = models.TextField(max_length=100)
     workup_instruction = models.TextField(max_length=5000)
+    upload_file = models.FileField(blank=True, null=True,
+       upload_to='uploaded_files/%Y/%m/%D/')
 
     def __str__(self):
         return '{0}'.format(self.workup_name)

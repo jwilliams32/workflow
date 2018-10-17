@@ -26,7 +26,7 @@ MEDIA_URL = "/media/"
 SECRET_KEY = '789kp14v(9gq!ey1_g9%8v*dj&r!rc7l!wg9f_p+&mjkmmi#l3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = [‘0.0.0.0’, ‘localhost’]
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'workups',
     'django_extensions',
     'analytics',
+    'grappelli',
 ]
 
 MIDDLEWARE = [

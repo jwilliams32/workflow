@@ -20,6 +20,7 @@ from django.conf import settings
 from django.views.static import serve
 
 urlpatterns = [
+    path('grappelli/', include('grappelli.urls')),  # grappelli URLS
     path('admin/', admin.site.urls),
     path('', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),

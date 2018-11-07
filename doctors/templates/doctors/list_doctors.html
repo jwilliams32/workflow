@@ -14,27 +14,29 @@
      <div class="row">
         {% for doctor in doctors %}
         <div class="col-md-6 col-lg-4 text-center">
-            <div class="card mb-3">
-                <a href="{{ doctor.get_absolute_url}}">
-                    {% if doctor.doctor_pic %}
-                        <img class="card-img-top" src="../media/{{doctor.doctor_pic}}" alt="Doctor Picture">
-                    {% else %}
-                        <img class="card-img-top" src="https://images.vexels.com/media/users/3/144185/isolated/preview/a9075b02366ea61e8995f8d5b08d0267-flat-doctor-cartoon-by-vexels.png" alt="Generic Doctor Picture">
-                    {% endif %}
-                <div class="card-body">
-                    <h4 class="card-title"></h4>
-                     <h2>{{doctor}}</h2>
-                    <p class="card-text">{{doctor.description}}</p>
-                </div>
-                </a>
+                <div class="card mb-4">
+                    <a href="{{ doctor.get_absolute_url}}">
+                        {% if doctor.doctor_pic %}
+                            <img class="card-img-top" alt="Card image cap" src="../media/{{doctor.doctor_pic}}" alt="Doctor Picture">
+                        {% else %}
+                            <img class="card-img-top" alt="Card image cap" src="https://images.vexels.com/media/users/3/144185/isolated/preview/a9075b02366ea61e8995f8d5b08d0267-flat-doctor-cartoon-by-vexels.png" alt="Generic Doctor Picture">
+                        {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                         <h2>{{doctor}}</h2>
+                        <p class="card-text">{{doctor.description}}</p>
+                    </div>
+                    </a>
 
-            </div>
+                </div>
         </div>
             <!--<li>-->
             <!--<a href="{{ doctor.get_absolute_url}}">{{ doctor }}</a>-->
             <!--</li>-->
 
         {% endfor %}
+
+
     {% else %}
 
         <h2>No doctors have been added!</h2>
